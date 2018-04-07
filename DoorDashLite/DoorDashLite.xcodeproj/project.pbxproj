@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F99FA5E22078AA6E00E39FAC /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = F99FA5DE2078AA6E00E39FAC /* Controller */; };
+		F99FA5E32078AA6E00E39FAC /* View in Resources */ = {isa = PBXBuildFile; fileRef = F99FA5DF2078AA6E00E39FAC /* View */; };
+		F99FA5E42078AA6E00E39FAC /* Network in Resources */ = {isa = PBXBuildFile; fileRef = F99FA5E02078AA6E00E39FAC /* Network */; };
+		F99FA5E52078AA6E00E39FAC /* Model in Resources */ = {isa = PBXBuildFile; fileRef = F99FA5E12078AA6E00E39FAC /* Model */; };
+		F99FA5E82078AB5E00E39FAC /* SupportingFiles in Resources */ = {isa = PBXBuildFile; fileRef = F99FA5E62078AB5E00E39FAC /* SupportingFiles */; };
 		F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C220788E970008EFF9 /* AppDelegate.swift */; };
-		F9BB44C520788E970008EFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C420788E970008EFF9 /* ViewController.swift */; };
 		F9BB44C820788E970008EFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44C620788E970008EFF9 /* Main.storyboard */; };
 		F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C920788E970008EFF9 /* DoorDashLite.xcdatamodeld */; };
 		F9BB44CD20788E970008EFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44CC20788E970008EFF9 /* Assets.xcassets */; };
@@ -36,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F99FA5DE2078AA6E00E39FAC /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controller; sourceTree = "<group>"; };
+		F99FA5DF2078AA6E00E39FAC /* View */ = {isa = PBXFileReference; lastKnownFileType = folder; path = View; sourceTree = "<group>"; };
+		F99FA5E02078AA6E00E39FAC /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Network; sourceTree = "<group>"; };
+		F99FA5E12078AA6E00E39FAC /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		F99FA5E62078AB5E00E39FAC /* SupportingFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SupportingFiles; sourceTree = "<group>"; };
 		F9BB44BF20788E970008EFF9 /* DoorDashLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BB44C220788E970008EFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9BB44C420788E970008EFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9BB44C720788E970008EFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9BB44CA20788E970008EFF9 /* DoorDashLite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoorDashLite.xcdatamodel; sourceTree = "<group>"; };
 		F9BB44CC20788E970008EFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,13 +111,17 @@
 		F9BB44C120788E970008EFF9 /* DoorDashLite */ = {
 			isa = PBXGroup;
 			children = (
-				F9BB44C220788E970008EFF9 /* AppDelegate.swift */,
-				F9BB44C420788E970008EFF9 /* ViewController.swift */,
-				F9BB44C620788E970008EFF9 /* Main.storyboard */,
-				F9BB44CC20788E970008EFF9 /* Assets.xcassets */,
 				F9BB44CE20788E970008EFF9 /* LaunchScreen.storyboard */,
+				F9BB44C620788E970008EFF9 /* Main.storyboard */,
 				F9BB44D120788E970008EFF9 /* Info.plist */,
 				F9BB44C920788E970008EFF9 /* DoorDashLite.xcdatamodeld */,
+				F9BB44C220788E970008EFF9 /* AppDelegate.swift */,
+				F99FA5E12078AA6E00E39FAC /* Model */,
+				F99FA5DF2078AA6E00E39FAC /* View */,
+				F99FA5DE2078AA6E00E39FAC /* Controller */,
+				F99FA5E02078AA6E00E39FAC /* Network */,
+				F9BB44CC20788E970008EFF9 /* Assets.xcassets */,
+				F99FA5E62078AB5E00E39FAC /* SupportingFiles */,
 			);
 			path = DoorDashLite;
 			sourceTree = "<group>";
@@ -254,6 +266,11 @@
 			files = (
 				F9BB44D020788E970008EFF9 /* LaunchScreen.storyboard in Resources */,
 				F9BB44CD20788E970008EFF9 /* Assets.xcassets in Resources */,
+				F99FA5E22078AA6E00E39FAC /* Controller in Resources */,
+				F99FA5E42078AA6E00E39FAC /* Network in Resources */,
+				F99FA5E52078AA6E00E39FAC /* Model in Resources */,
+				F99FA5E82078AB5E00E39FAC /* SupportingFiles in Resources */,
+				F99FA5E32078AA6E00E39FAC /* View in Resources */,
 				F9BB44C820788E970008EFF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BB44C520788E970008EFF9 /* ViewController.swift in Sources */,
 				F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */,
 				F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */,
 			);
@@ -454,6 +470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.test.DoorDashLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoorDashLite/SupportingFiles/DoorDashLite-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vik.test.DoorDashLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoorDashLite/SupportingFiles/DoorDashLite-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
