@@ -20,6 +20,14 @@ final class AddressViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
 
+extension AddressViewController {
+    
+    // MARK: - Unwind Segue
+    
+    @IBAction func closeNearbyList(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 

@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // TODO: Create Theme enum and update accordingly
+        // Set up application's custom appearance
+        setupAppearance()
+        
         return true
     }
 
@@ -87,5 +92,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+private extension AppDelegate {
+    
+    /**
+     This method sets up custom appearance/theme of the app
+     */
+    
+    func setupAppearance() {
+        // Set up NavigationBar appearance
+        UINavigationBar.appearance().tintColor = UIColor(red: 229.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        
+        // Set up TabBar appearance
+        UITabBar.appearance().tintColor = UIColor(red: 229.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+    }
 }
 
