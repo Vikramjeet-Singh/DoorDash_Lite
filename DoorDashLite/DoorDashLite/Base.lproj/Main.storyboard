@@ -150,6 +150,13 @@
                                             <constraint firstAttribute="trailing" secondItem="l2p-Bk-g61" secondAttribute="trailing" constant="15" id="kma-Kh-Lve"/>
                                             <constraint firstItem="wOz-3g-Qb0" firstAttribute="leading" secondItem="PMV-E8-auU" secondAttribute="leading" constant="11" id="ykj-Ry-OaJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="deliveryCostLabel" destination="rQR-Gv-oDK" id="o4I-Ko-ddC"/>
+                                            <outlet property="nameLabel" destination="sKT-Oa-lHb" id="oUx-oE-oRf"/>
+                                            <outlet property="thumbnail" destination="wOz-3g-Qb0" id="9IG-Oe-Tlh"/>
+                                            <outlet property="typeLabel" destination="vgb-k6-Hxx" id="Frs-Du-ZSz"/>
+                                            <outlet property="waitLabel" destination="l2p-Bk-g61" id="kCo-rh-EMm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -171,6 +178,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="cqe-Xm-zLx" id="4Tc-vi-pd5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eb-ge-JbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oc0-5Y-EE9" userLabel="Exit" sceneMemberID="exit"/>

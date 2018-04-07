@@ -12,6 +12,8 @@
 		F922777D2078C8F2002B0A40 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922777C2078C8F2002B0A40 /* ExploreViewController.swift */; };
 		F92277822078C923002B0A40 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F92277812078C923002B0A40 /* Reachability.m */; };
 		F92277882078E707002B0A40 /* NearbyRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92277872078E707002B0A40 /* NearbyRestaurantCell.swift */; };
+		F922778A2078EA48002B0A40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92277892078EA48002B0A40 /* NetworkManager.swift */; };
+		F922778C2078EA96002B0A40 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922778B2078EA96002B0A40 /* Errors.swift */; };
 		F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C220788E970008EFF9 /* AppDelegate.swift */; };
 		F9BB44C820788E970008EFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44C620788E970008EFF9 /* Main.storyboard */; };
 		F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C920788E970008EFF9 /* DoorDashLite.xcdatamodeld */; };
@@ -47,6 +49,8 @@
 		F92277812078C923002B0A40 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F92277832078C925002B0A40 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F92277872078E707002B0A40 /* NearbyRestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantCell.swift; sourceTree = "<group>"; };
+		F92277892078EA48002B0A40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F922778B2078EA96002B0A40 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		F9BB44BF20788E970008EFF9 /* DoorDashLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BB44C220788E970008EFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BB44C720788E970008EFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		F922777F2078C914002B0A40 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F92277892078EA48002B0A40 /* NetworkManager.swift */,
+				F922778B2078EA96002B0A40 /* Errors.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -129,6 +135,13 @@
 				F922777A2078C8F1002B0A40 /* FavoritesViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F922778D2078EAB6002B0A40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F9BB44B620788E970008EFF9 = {
@@ -163,6 +176,7 @@
 				F92277852078C96F002B0A40 /* Model */,
 				F92277772078C8E5002B0A40 /* View */,
 				F92277862078C98C002B0A40 /* Controller */,
+				F922778D2078EAB6002B0A40 /* ViewModel */,
 				F922777F2078C914002B0A40 /* Network */,
 				F92277842078C92D002B0A40 /* SupportingFiles */,
 				F9BB44CC20788E970008EFF9 /* Assets.xcassets */,
@@ -339,8 +353,10 @@
 				F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */,
 				F92277882078E707002B0A40 /* NearbyRestaurantCell.swift in Sources */,
 				F922777D2078C8F2002B0A40 /* ExploreViewController.swift in Sources */,
+				F922778A2078EA48002B0A40 /* NetworkManager.swift in Sources */,
 				F922777B2078C8F1002B0A40 /* FavoritesViewController.swift in Sources */,
 				F92277822078C923002B0A40 /* Reachability.m in Sources */,
+				F922778C2078EA96002B0A40 /* Errors.swift in Sources */,
 				F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

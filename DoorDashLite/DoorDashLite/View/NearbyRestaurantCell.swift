@@ -8,8 +8,15 @@
 
 import UIKit
 
-class NearbyRestaurantCell: UITableViewCell {
+final class NearbyRestaurantCell: UITableViewCell {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak private var thumbnail: UIImageView!
+    @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak private var typeLabel: UILabel!
+    @IBOutlet weak private var deliveryCostLabel: UILabel!
+    @IBOutlet weak private var waitLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +27,7 @@ class NearbyRestaurantCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // TODO: Make configure method generic. Think if protocol or generic function or extension to uitableview
 
 }

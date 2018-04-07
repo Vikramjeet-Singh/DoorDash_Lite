@@ -10,6 +10,10 @@ import UIKit
 
 final class ExploreViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak private var tableView: UITableView!
+    
+    // MARK: - View Controller lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
