@@ -10,6 +10,7 @@
 #define DoorDashLite_Bridging_Header_h
 
 #import "Reachability.h"
+#import "MBProgressHUD.h"
 
 #endif /* DoorDashLite_Bridging_Header_h */
 

@@ -13,7 +13,15 @@
 		F92277822078C923002B0A40 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F92277812078C923002B0A40 /* Reachability.m */; };
 		F92277882078E707002B0A40 /* NearbyRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92277872078E707002B0A40 /* NearbyRestaurantCell.swift */; };
 		F922778A2078EA48002B0A40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92277892078EA48002B0A40 /* NetworkManager.swift */; };
-		F922778C2078EA96002B0A40 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922778B2078EA96002B0A40 /* Errors.swift */; };
+		F922778C2078EA96002B0A40 /* DoorDashError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922778B2078EA96002B0A40 /* DoorDashError.swift */; };
+		F9AB7C572079BCEC005E435B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C562079BCEC005E435B /* Restaurant.swift */; };
+		F9AB7C592079BEE4005E435B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C582079BEE4005E435B /* Resource.swift */; };
+		F9AB7C5B2079D967005E435B /* RawServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C5A2079D967005E435B /* RawServerResponse.swift */; };
+		F9AB7C5D2079DD1F005E435B /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C5C2079DD1F005E435B /* ExploreViewModel.swift */; };
+		F9AB7C60207A8C5C005E435B /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C5F207A8C5C005E435B /* Cache.swift */; };
+		F9AB7C63207A9F26005E435B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C62207A9F26005E435B /* MBProgressHUD.m */; };
+		F9AB7C66207A9F7E005E435B /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */; };
+		F9AB7C6C207AD077005E435B /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */; };
 		F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C220788E970008EFF9 /* AppDelegate.swift */; };
 		F9BB44C820788E970008EFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44C620788E970008EFF9 /* Main.storyboard */; };
 		F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C920788E970008EFF9 /* DoorDashLite.xcdatamodeld */; };
@@ -50,7 +58,16 @@
 		F92277832078C925002B0A40 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F92277872078E707002B0A40 /* NearbyRestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantCell.swift; sourceTree = "<group>"; };
 		F92277892078EA48002B0A40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		F922778B2078EA96002B0A40 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		F922778B2078EA96002B0A40 /* DoorDashError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashError.swift; sourceTree = "<group>"; };
+		F9AB7C562079BCEC005E435B /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F9AB7C582079BEE4005E435B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		F9AB7C5A2079D967005E435B /* RawServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawServerResponse.swift; sourceTree = "<group>"; };
+		F9AB7C5C2079DD1F005E435B /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		F9AB7C5F207A8C5C005E435B /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		F9AB7C61207A9F26005E435B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F9AB7C62207A9F26005E435B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 		F9BB44BF20788E970008EFF9 /* DoorDashLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BB44C220788E970008EFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BB44C720788E970008EFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				F92277892078EA48002B0A40 /* NetworkManager.swift */,
-				F922778B2078EA96002B0A40 /* Errors.swift */,
+				F922778B2078EA96002B0A40 /* DoorDashError.swift */,
+				F9AB7C582079BEE4005E435B /* Resource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -113,6 +131,8 @@
 		F92277842078C92D002B0A40 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F9AB7C61207A9F26005E435B /* MBProgressHUD.h */,
+				F9AB7C62207A9F26005E435B /* MBProgressHUD.m */,
 				F92277832078C925002B0A40 /* Reachability.h */,
 				F92277812078C923002B0A40 /* Reachability.m */,
 				F92277802078C920002B0A40 /* DoorDashLite-Bridging-Header.h */,
@@ -123,6 +143,8 @@
 		F92277852078C96F002B0A40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F9AB7C562079BCEC005E435B /* Restaurant.swift */,
+				F9AB7C5A2079D967005E435B /* RawServerResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,8 +162,26 @@
 		F922778D2078EAB6002B0A40 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F9AB7C5C2079DD1F005E435B /* ExploreViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9AB7C5E207A8C45005E435B /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				F9AB7C5F207A8C5C005E435B /* Cache.swift */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		F9AB7C64207A9F56005E435B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */,
+				F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F9BB44B620788E970008EFF9 = {
@@ -178,6 +218,8 @@
 				F92277862078C98C002B0A40 /* Controller */,
 				F922778D2078EAB6002B0A40 /* ViewModel */,
 				F922777F2078C914002B0A40 /* Network */,
+				F9AB7C5E207A8C45005E435B /* Miscellaneous */,
+				F9AB7C64207A9F56005E435B /* Extensions */,
 				F92277842078C92D002B0A40 /* SupportingFiles */,
 				F9BB44CC20788E970008EFF9 /* Assets.xcassets */,
 			);
@@ -349,14 +391,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9AB7C6C207AD077005E435B /* UITableViewCell+Reusable.swift in Sources */,
+				F9AB7C572079BCEC005E435B /* Restaurant.swift in Sources */,
 				F92277792078C8EF002B0A40 /* AddressViewController.swift in Sources */,
+				F9AB7C5B2079D967005E435B /* RawServerResponse.swift in Sources */,
 				F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */,
+				F9AB7C592079BEE4005E435B /* Resource.swift in Sources */,
 				F92277882078E707002B0A40 /* NearbyRestaurantCell.swift in Sources */,
 				F922777D2078C8F2002B0A40 /* ExploreViewController.swift in Sources */,
+				F9AB7C63207A9F26005E435B /* MBProgressHUD.m in Sources */,
 				F922778A2078EA48002B0A40 /* NetworkManager.swift in Sources */,
+				F9AB7C5D2079DD1F005E435B /* ExploreViewModel.swift in Sources */,
 				F922777B2078C8F1002B0A40 /* FavoritesViewController.swift in Sources */,
 				F92277822078C923002B0A40 /* Reachability.m in Sources */,
-				F922778C2078EA96002B0A40 /* Errors.swift in Sources */,
+				F922778C2078EA96002B0A40 /* DoorDashError.swift in Sources */,
+				F9AB7C60207A8C5C005E435B /* Cache.swift in Sources */,
+				F9AB7C66207A9F7E005E435B /* UIViewController+HUD.swift in Sources */,
 				F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
