@@ -142,7 +142,7 @@ class ExploreViewModel {
      - parameters index: Index in the restaurants list
      */
     func waitStatus(at index: Int) -> String {
-        return (restaurants[index].statusType == "pre-order") ? NSLocalizedString("Pre-Order", comment: "") : restaurants[index].status
+        return (restaurants[index].statusType == "pre-order") ? NSLocalizedString("Pre-Order", comment: "") : NSLocalizedString("\(restaurants[index].waitTime ?? 0) mins", comment: "")
     }
     
     /**

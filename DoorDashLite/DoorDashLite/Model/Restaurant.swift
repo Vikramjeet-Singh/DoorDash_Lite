@@ -15,6 +15,7 @@ struct Restaurant: Codable {
     let deliveryFee: Int
     let status: String
     let statusType: String
+    let waitTime: Int?
     
     init(from decoder: Decoder) throws {
         let rawResponse = try RawServerResponse(from: decoder)
@@ -25,5 +26,6 @@ struct Restaurant: Codable {
         deliveryFee = rawResponse.deliveryFee
         status = rawResponse.status
         statusType = rawResponse.statusType
+        waitTime = rawResponse.wait
     }
 }

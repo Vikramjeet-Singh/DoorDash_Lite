@@ -21,6 +21,7 @@ struct RawServerResponse: Codable {
         case business = "business"
         case thumbnail = "cover_img_url"
         case statusType = "status_type"
+        case wait = "asap_time"
         case description
         case status
     }
@@ -30,5 +31,6 @@ struct RawServerResponse: Codable {
     let deliveryFee: Int
     let status: String
     let statusType: String
+    let wait: Int?
     let business: Business
 }
