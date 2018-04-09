@@ -20,6 +20,9 @@ final class NetworkManager {
     
     // MARK: - Public Properties
     static let shared = NetworkManager(withSession: URLSession.shared)
+    static var isNetworkAvailable: Bool {
+        return NetworkManager.shared.isNetworkAvailable
+    }
     
     // MARK: - Private properties
     

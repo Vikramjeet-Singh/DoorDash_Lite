@@ -71,7 +71,8 @@ final class AddressViewController: UIViewController {
             if let street = self.annotation.title,
                 let city = self.annotation.subtitle,
                 !street.isEmpty,
-                !city.isEmpty
+                !city.isEmpty,
+                NetworkManager.isNetworkAvailable
             {
                 self.location.text = street + ", " + city
             }
@@ -124,7 +125,7 @@ final class AddressViewController: UIViewController {
     }
     
     private func reverseGeocode(location: CLLocation) {
-        if Reachability.forInternetConnection().currentReachabilityStatus().rawValue != 0 {
+        if NetworkManager.isNetworkAvailable {
             geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 guard let placemarks = placemarks else { return }
                 
@@ -165,14 +166,14 @@ extension AddressViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         // Get location
         let centerLocation = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        self.selectedLocation = Location(coordinate: centerLocation.coordinate)
+        self.updateAnnotation(with: Location(coordinate: centerLocation.coordinate))
         reverseGeocode(location: centerLocation)
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         // If no location is selected, then choose user's current location
         if selectedLocation == nil {
-            self.selectedLocation = Location(coordinate: userLocation.coordinate)
+            self.updateAnnotation(with: Location(coordinate: userLocation.coordinate))
             reverseGeocode(location: userLocation.location!)
         }
     }
