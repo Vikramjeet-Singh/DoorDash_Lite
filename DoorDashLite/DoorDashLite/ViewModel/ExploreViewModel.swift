@@ -133,7 +133,13 @@ class ExploreViewModel {
      - parameters index: Index in the restaurants list
      */
     func deliveryFee(at index: Int) -> String {
-        let priceStr = (restaurants[index].deliveryFee == 0) ? "Free" : "$\(restaurants[index].deliveryFee)"
+        var priceStr: String
+        if restaurants[index].deliveryFee == 0 {
+            priceStr = "Free"
+        } else {
+            priceStr = String(format: "$%.2f", Double(restaurants[index].deliveryFee) / 100.00)
+        }
+//        let priceStr = (restaurants[index].deliveryFee == 0) ? "Free" : "$\(restaurants[index].deliveryFee / 100)"
         return priceStr + NSLocalizedString(" delivery", comment: "")
     }
     
