@@ -155,7 +155,6 @@ extension AddressViewController {
         }
     }
     
-    
     @IBAction func closeNearbyList(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
     }
