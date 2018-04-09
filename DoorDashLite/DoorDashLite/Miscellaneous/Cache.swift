@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 struct Cache<T: AnyObject> {
-    
     private let cache = NSCache<NSString, T>()
     
     subscript(key: String) -> T? {

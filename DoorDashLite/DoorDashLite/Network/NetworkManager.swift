@@ -45,6 +45,12 @@ final class NetworkManager {
 extension NetworkManager {
     typealias ResultBlock<T> = (Result<T>) -> Void
     
+    /**
+     Method to start observing for Reachability
+     - parameters
+     observer: Observer to start listening for Reachability change notifications
+     callback: callback method with boolean argument indicating whether network is available or not
+     */
     static func startObservingReachability(_ observer: AnyObject, callback: @escaping (Bool) -> Void) {
         NotificationCenter.default.addObserver(forName: .reachabilityChanged,
                                                object: nil,
@@ -54,18 +60,28 @@ extension NetworkManager {
                                                 })
     }
     
+    /**
+     Method to stop observing for Reachability
+     - parameters
+     observer: Observer to stop listening for Reachability change notifications
+     */
     static func stopObservingReachability(_ observer: AnyObject) {
         NotificationCenter.default.removeObserver(observer, name: .reachabilityChanged, object: nil)
     }
 
-    static func fetchNearbyRestaurants(resource: Resource<[Restaurant]>, completion completionHandler: ResultBlock<[Restaurant]>? = nil) {
-        NetworkManager.shared.fetchNearbyRestaurants(resource: resource, completion: completionHandler)
+    /**
+     Method to fetch the resource
+     - parameters
+     resource: Resource struct that includes the url to fetch
+     callback: callback method with Result enum as the parameter
+     */
+    static func fetch<T>(resource: Resource<T>, completionHandler: ResultBlock<T>? = nil) {
+        NetworkManager.shared.fetch(resource: resource, completion: completionHandler)
     }
     
-    static func fetch<T>(resource: Resource<T>, completion: ResultBlock<T>? = nil) {
-        NetworkManager.shared.fetch(resource: resource, completion: completion)
-    }
-    
+    /**
+     Method to cancel all the outstanding/pending requests for the session
+     */
     static func cancelAllPendingRequests() {
         NetworkManager.shared.session.getAllTasks { (tasks) in
             // Cancel all outstanding tasks
@@ -80,10 +96,6 @@ extension NetworkManager {
 
 // MARK: - Private methods
 private extension NetworkManager {
-    
-    func fetchNearbyRestaurants(resource: Resource<[Restaurant]>, completion completionHandler: ResultBlock<[Restaurant]>? = nil) {
-        self.fetch(resource: resource, completion: completionHandler)
-    }
     
     func fetch<T>(resource: Resource<T>, completion: ResultBlock<T>? = nil) {
         if (isNetworkAvailable) {

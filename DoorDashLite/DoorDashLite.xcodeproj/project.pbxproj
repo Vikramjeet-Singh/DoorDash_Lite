@@ -22,12 +22,12 @@
 		F9AB7C63207A9F26005E435B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C62207A9F26005E435B /* MBProgressHUD.m */; };
 		F9AB7C66207A9F7E005E435B /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */; };
 		F9AB7C6C207AD077005E435B /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */; };
+		F9AB7C75207B0343005E435B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C74207B0343005E435B /* Location.swift */; };
 		F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C220788E970008EFF9 /* AppDelegate.swift */; };
 		F9BB44C820788E970008EFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44C620788E970008EFF9 /* Main.storyboard */; };
 		F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44C920788E970008EFF9 /* DoorDashLite.xcdatamodeld */; };
 		F9BB44CD20788E970008EFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44CC20788E970008EFF9 /* Assets.xcassets */; };
 		F9BB44D020788E970008EFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BB44CE20788E970008EFF9 /* LaunchScreen.storyboard */; };
-		F9BB44DB20788E970008EFF9 /* DoorDashLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44DA20788E970008EFF9 /* DoorDashLiteTests.swift */; };
 		F9BB44E620788E970008EFF9 /* DoorDashLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BB44E520788E970008EFF9 /* DoorDashLiteUITests.swift */; };
 		F9BB44F520788EF00008EFF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BB44F420788EF00008EFF9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +68,7 @@
 		F9AB7C62207A9F26005E435B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
 		F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		F9AB7C74207B0343005E435B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F9BB44BF20788E970008EFF9 /* DoorDashLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDashLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BB44C220788E970008EFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BB44C720788E970008EFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		F9BB44CF20788E970008EFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9BB44D120788E970008EFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BB44D620788E970008EFF9 /* DoorDashLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDashLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9BB44DA20788E970008EFF9 /* DoorDashLiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashLiteTests.swift; sourceTree = "<group>"; };
 		F9BB44DC20788E970008EFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BB44E120788E970008EFF9 /* DoorDashLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDashLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BB44E520788E970008EFF9 /* DoorDashLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashLiteUITests.swift; sourceTree = "<group>"; };
@@ -171,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F9AB7C5F207A8C5C005E435B /* Cache.swift */,
+				F9AB7C74207B0343005E435B /* Location.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -229,7 +230,6 @@
 		F9BB44D920788E970008EFF9 /* DoorDashLiteTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9BB44DA20788E970008EFF9 /* DoorDashLiteTests.swift */,
 				F9BB44DC20788E970008EFF9 /* Info.plist */,
 			);
 			path = DoorDashLiteTests;
@@ -395,6 +395,7 @@
 				F9AB7C572079BCEC005E435B /* Restaurant.swift in Sources */,
 				F92277792078C8EF002B0A40 /* AddressViewController.swift in Sources */,
 				F9AB7C5B2079D967005E435B /* RawServerResponse.swift in Sources */,
+				F9AB7C75207B0343005E435B /* Location.swift in Sources */,
 				F9BB44CB20788E970008EFF9 /* DoorDashLite.xcdatamodeld in Sources */,
 				F9AB7C592079BEE4005E435B /* Resource.swift in Sources */,
 				F92277882078E707002B0A40 /* NearbyRestaurantCell.swift in Sources */,
@@ -415,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BB44DB20788E970008EFF9 /* DoorDashLiteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZTHC4SLMFS;
 				INFOPLIST_FILE = DoorDashLite/Info.plist;
@@ -590,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZTHC4SLMFS;
 				INFOPLIST_FILE = DoorDashLite/Info.plist;

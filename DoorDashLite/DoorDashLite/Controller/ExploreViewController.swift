@@ -33,7 +33,21 @@ final class ExploreViewController: UIViewController {
     private var location: Location? {
         didSet {
             guard let loc = location else { return }
-            self.viewModel = ExploreViewModel(location: loc, listener: self)
+            self.viewModel = ExploreViewModel(location: loc) { error in
+                DispatchQueue.main.async { [weak self] in
+                    if let weakSelf = self {
+                        weakSelf.hideHUD()
+                        if let error = error {
+                            let offlineController = UIAlertController(title: "Error fetching restaurants", message: error.localizedDescription, preferredStyle: .alert)
+                            let doneAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                            offlineController.addAction(doneAction)
+                            weakSelf.present(offlineController, animated: true, completion: nil)
+                        } else {
+                            weakSelf.updateView()
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -61,11 +75,29 @@ final class ExploreViewController: UIViewController {
         // set up title attributes
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 229.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)]
     }
+    
+    private func updateView() {
+        if let viewModel = viewModel,
+            viewModel.restaurantCount <= 0
+        {
+            let emptyResultController = UIAlertController(title: "", message:NSLocalizedString("No available restaurants", comment: ""), preferredStyle: .alert)
+            let doneAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            emptyResultController.addAction(doneAction)
+            present(emptyResultController, animated: true, completion: nil)
+        } else {
+            tableView.reloadData()
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource methods
 
 extension ExploreViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel?.numberOfSections() ?? 0
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.numberOfRowsInSection(section) ?? 0
     }
@@ -83,26 +115,6 @@ extension ExploreViewController: UITableViewDataSource {
 
 extension ExploreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
-}
-
-// MARK: - Listener protocol methods
-
-extension ExploreViewController: Listener {
-    func didUpdate(_ error: Error?=nil) {
-        DispatchQueue.main.async { [weak self] in
-            if let weakSelf = self {
-                weakSelf.hideHUD()
-                if let error = error {
-                    let offlineController = UIAlertController(title: "Error fetching restaurants", message: error.localizedDescription, preferredStyle: .alert)
-                    let doneAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    offlineController.addAction(doneAction)
-                    weakSelf.present(offlineController, animated: true, completion: nil)
-                } else {
-                    weakSelf.tableView?.reloadData()
-                }
-            }
-        }
-    }
 }
 
 // MARK: - DependencyInjectable protocol methods

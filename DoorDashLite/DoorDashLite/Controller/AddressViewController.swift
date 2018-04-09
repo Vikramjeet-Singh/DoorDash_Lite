@@ -21,7 +21,7 @@ final class AddressViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak private var location: UITextField!
+    @IBOutlet weak private var location: UILabel!
     @IBOutlet weak private var confirmAddress: UIButton! {
         didSet {
             confirmAddress.isEnabled = false
@@ -41,6 +41,13 @@ final class AddressViewController: UIViewController {
             }
         }
     }
+    
+    private lazy var locationManager: CLLocationManager = {
+        let locManager = CLLocationManager()
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        return locManager
+    }()
     
     private var annotation = MKPointAnnotation() {
         didSet {
@@ -119,9 +126,6 @@ final class AddressViewController: UIViewController {
                     self.selectedLocation = Location(coordinate: location.coordinate, street: name, city: locality)
                 }
             })
-        } else {
-            // show error controller
-            present(offlineAlertController, animated: true, completion: nil)
         }
     }
 }
@@ -156,30 +160,11 @@ extension AddressViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        updateAnnotation(with: Location(coordinate: userLocation.coordinate))
-        reverseGeocode(location: userLocation.location!)
+        // If no location is selected, then choose user's current location
+        if selectedLocation == nil {
+            updateAnnotation(with: Location(coordinate: userLocation.coordinate))
+            reverseGeocode(location: userLocation.location!)
+        }
     }
 
-}
-
-// MARK: - Location struct
-
-struct Location {
-    fileprivate let coordinate: CLLocationCoordinate2D
-    fileprivate let street: String
-    fileprivate let city: String
-    
-    init(coordinate: CLLocationCoordinate2D, street: String = "", city: String = "") {
-        self.coordinate = coordinate
-        self.street = street
-        self.city = city
-    }
-    
-    var latitude: String {
-        return String(coordinate.latitude)
-    }
-    
-    var longitude: String {
-        return String(coordinate.longitude)
-    }
 }

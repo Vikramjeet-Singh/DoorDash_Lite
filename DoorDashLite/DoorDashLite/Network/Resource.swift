@@ -8,22 +8,6 @@
 
 import Foundation
 
-// MARK: - Request Method
-
-enum RequestMethod {
-    case get
-    case post(data: [String : Any]?)
-    
-    fileprivate var method: String {
-        switch self {
-        case .get:
-            return "GET"
-        case .post:
-            return "POST"
-        }
-    }
-}
-
 // MARK: - Resource
 
 struct Resource<T> {
@@ -55,6 +39,22 @@ struct Resource<T> {
         }
         
         return nil
+    }
+}
+
+// MARK: - Request Method
+
+enum RequestMethod {
+    case get
+    case post(data: [String : Any]?)
+    
+    fileprivate var method: String {
+        switch self {
+        case .get:
+            return "GET"
+        case .post:
+            return "POST"
+        }
     }
 }
 

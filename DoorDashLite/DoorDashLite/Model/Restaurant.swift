@@ -8,7 +8,6 @@
 
 import Foundation
 
-// MARK: - Restaurant
 struct Restaurant: Codable {
     let name: String
     let thumbnail: String
