@@ -6,7 +6,7 @@ It is a singleton that is responsible for making all the network calls using URL
 
 AddressViewController
 ------------------------
-This View Controller is the initial view Controller and is responsible for selecting user's current location. User can =drag the map to change the annotation view and the selected location. In case of no internet, user's current location would be shown but "Confirm Address" button would be disabled. Once the internet is back, "Confirm Address" button would re-enable.
+This View Controller is the initial view Controller and is responsible for selecting user's current location. User can drag the map to change the annotation view and the selected location. User can also tap anywhere on the map to select a location. In case of no internet, user's current location would be shown but "Confirm Address" button would be disabled. Once the internet is back, "Confirm Address" button would re-enable.
 
 ExploreViewController
 ------------------------

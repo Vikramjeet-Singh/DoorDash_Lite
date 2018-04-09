@@ -47,6 +47,7 @@ extension NearbyRestaurantCell: ConfigurableCell {
         type.text = viewModel.type(at: indexPath.row)
         deliveryCost.text = viewModel.deliveryFee(at: indexPath.row)
         wait.text = viewModel.waitStatus(at: indexPath.row)
+        thumbnail.image = nil
         viewModel.getImage(for: indexPath) { image in
             DispatchQueue.main.async {
                 self.thumbnail.image = image

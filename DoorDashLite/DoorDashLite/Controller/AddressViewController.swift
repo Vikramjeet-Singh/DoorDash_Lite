@@ -49,6 +49,18 @@ final class AddressViewController: UIViewController {
         return locManager
     }()
     
+    
+    private lazy var tapGestureRecognizer: UITapGestureRecognizer = {
+        return UITapGestureRecognizer(target: self,
+                                                action:#selector(handleTap(_:)))
+   }()
+    
+    @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
+        let point = recognizer.location(in: mapView)
+        let tapPoint = mapView.convert(point, toCoordinateFrom: mapView)
+        self.selectedLocation = Location(coordinate: tapPoint)
+    }
+    
     private var annotation = MKPointAnnotation() {
         didSet {
             // Set map's zoom level
@@ -81,6 +93,7 @@ final class AddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
+        mapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -156,14 +169,14 @@ extension AddressViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         // Get location
         let centerLocation = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        updateAnnotation(with: Location(coordinate: centerLocation.coordinate))
+        self.selectedLocation = Location(coordinate: centerLocation.coordinate)
         reverseGeocode(location: centerLocation)
     }
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         // If no location is selected, then choose user's current location
         if selectedLocation == nil {
-            updateAnnotation(with: Location(coordinate: userLocation.coordinate))
+            self.selectedLocation = Location(coordinate: userLocation.coordinate)
             reverseGeocode(location: userLocation.location!)
         }
     }
