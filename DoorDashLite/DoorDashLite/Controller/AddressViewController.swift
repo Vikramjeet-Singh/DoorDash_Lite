@@ -18,6 +18,7 @@ final class AddressViewController: UIViewController {
         didSet {
             mapView.showsUserLocation = true
             mapView.delegate = self
+            mapView.addGestureRecognizer(tapGestureRecognizer)
         }
     }
     
@@ -49,12 +50,8 @@ final class AddressViewController: UIViewController {
         return locManager
     }()
     
-    
-    private lazy var tapGestureRecognizer: UITapGestureRecognizer = {
-        return UITapGestureRecognizer(target: self,
-                                                action:#selector(handleTap(_:)))
-   }()
-    
+    private lazy var tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                                           action:#selector(handleTap(_:)))
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
         let point = recognizer.location(in: mapView)
         let tapPoint = mapView.convert(point, toCoordinateFrom: mapView)
@@ -93,7 +90,6 @@ final class AddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
-        mapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
