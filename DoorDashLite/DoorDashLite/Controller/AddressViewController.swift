@@ -45,7 +45,7 @@ final class AddressViewController: UIViewController {
     private lazy var locationManager: CLLocationManager = {
         let locManager = CLLocationManager()
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.requestWhenInUseAuthorization()
+        locManager.delegate = self
         return locManager
     }()
     
@@ -80,6 +80,7 @@ final class AddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,5 +167,6 @@ extension AddressViewController: MKMapViewDelegate {
             reverseGeocode(location: userLocation.location!)
         }
     }
-
 }
+
+extension AddressViewController: CLLocationManagerDelegate {}
