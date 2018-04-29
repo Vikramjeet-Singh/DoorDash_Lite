@@ -6,31 +6,32 @@
 //  Copyright © 2018 Vikramjeet Singh. All rights reserved.
 //
 
-import Foundation
+//import Foundation
+//
+//// MARK: - RawServerResponse
+//struct RawServerResponse: Codable {
+//
+//    // Restaurant Description (id and name)
+//    struct Business: Codable {
+//        var name: String
+//    }
+//
+//    private enum CodingKeys: String, CodingKey {
+//        case deliveryFee = "delivery_fee"
+//        case business = "business"
+//        case thumbnail = "cover_img_url"
+//        case statusType = "status_type"
+//        case wait = "asap_time"
+//        case description
+//        case status
+//    }
+//
+//    let thumbnail: String
+//    let description: String
+//    let deliveryFee: Int
+//    let status: String
+//    let statusType: String
+//    let wait: Int?
+//    let business: Business
+//}
 
-// MARK: - RawServerResponse
-struct RawServerResponse: Codable {
-    
-    // Restaurant Description (id and name)
-    struct Business: Codable {
-        var name: String
-    }
-    
-    private enum CodingKeys: String, CodingKey {
-        case deliveryFee = "delivery_fee"
-        case business = "business"
-        case thumbnail = "cover_img_url"
-        case statusType = "status_type"
-        case wait = "asap_time"
-        case description
-        case status
-    }
-    
-    let thumbnail: String
-    let description: String
-    let deliveryFee: Int
-    let status: String
-    let statusType: String
-    let wait: Int?
-    let business: Business
-}
