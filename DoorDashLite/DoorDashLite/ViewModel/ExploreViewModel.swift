@@ -64,10 +64,6 @@ class ExploreViewModel: RestaurantViewModel {
             })
         }
     }
-    
-    func update(_ rest: Restaurant, at index: Int) {
-        self.restaurants[index] = rest
-    }
 }
 
 // MARK: - Private methods

@@ -20,16 +20,12 @@ struct Restaurant: Codable {
     let status: String
     let statusType: String
     let waitTime: Int?
-    let menu: [MenuItem]
-    
-    private var _isFavorite: Bool = false
     
     private enum CodingKeys: String, CodingKey {
         case thumbnail = "cover_img_url"
         case deliveryFee = "delivery_fee"
         case statusType = "status_type"
         case waitTime = "asap_time"
-        case menu = "menus"
         case business = "business"
         case id
         case name
@@ -49,21 +45,10 @@ struct Restaurant: Codable {
         status = try values.decode(String.self, forKey: .status)
         statusType = try values.decode(String.self, forKey: .statusType)
         waitTime = try values.decode(Int?.self, forKey: .waitTime)
-        menu = try values.decode([MenuItem].self, forKey: .menu)
-        
     }
     
     mutating func setImage(_ img: UIImage) {
         self.image = img
-    }
-    
-    var isFavorite: Bool {
-        get {
-            return _isFavorite
-        }
-        mutating set {
-            self._isFavorite = newValue
-        }
     }
 }
 
@@ -71,35 +56,6 @@ extension Restaurant {
     // Restaurant Description (id and name)
     struct Business: Codable {
         var name: String
-    }
-    
-    // Menu Items
-    struct MenuItem: Codable {
-        struct PopularItem: Codable {
-            let price: Int
-            let description: String?
-            let id: Int
-            let name: String
-            let imgURLStr: String?
-            
-            enum CodingKeys: String, CodingKey {
-                case price
-                case description
-                case id
-                case name
-                case imgURLStr = "img_url"
-            }
-        }
-        
-        let popularItems: [PopularItem]
-        let name: String
-        let id: Int
-        
-        enum CodingKeys: String, CodingKey {
-            case popularItems = "popular_items"
-            case name
-            case id
-        }
     }
 }
 
