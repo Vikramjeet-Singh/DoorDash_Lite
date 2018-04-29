@@ -28,4 +28,17 @@ extension DoorDashError: LocalizedError {
             return e.localizedDescription
         }
     }
+    
+    var failureReason: String? {
+        switch self {
+        case .internalError(let e):
+            return e?.localizedDescription
+        case .invalidURL:
+            return errorDescription
+        case .offline:
+            return errorDescription
+        case .other(let e):
+            return e.localizedDescription
+        }
+    }
 }
