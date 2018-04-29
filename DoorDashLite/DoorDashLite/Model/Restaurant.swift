@@ -104,20 +104,6 @@ extension Restaurant {
 }
 
 extension Restaurant {
-    private static var _favorites: [Int: Restaurant] = [:]
-    
-    static var favorites: [Restaurant] {
-        return Array(Restaurant._favorites.values)
-    }
-    
-    static func addFavorite(_ restaurant: Restaurant) {
-        Restaurant._favorites[restaurant.id] = restaurant
-    }
-    
-    static func removeFavorite(_ restaurant: Restaurant) {
-        Restaurant._favorites[restaurant.id] = nil
-    }
-    
     static func fetchNearbyRestaurants(location: Location, completion: @escaping (Result<[Restaurant]>) -> Void) {
         // Create restaurant list resource
         let listResource: Resource<[Restaurant]> = Resource(endpoint: .nearby(latitude: location.latitude, longitude: location.longitude),
