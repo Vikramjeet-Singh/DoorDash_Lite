@@ -15,6 +15,7 @@
 		F922778A2078EA48002B0A40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92277892078EA48002B0A40 /* NetworkManager.swift */; };
 		F922778C2078EA96002B0A40 /* DoorDashError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922778B2078EA96002B0A40 /* DoorDashError.swift */; };
 		F98396A62095BB3700BCC9BA /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98396A52095BB3700BCC9BA /* RestaurantViewModel.swift */; };
+		F98396B02095E6A600BCC9BA /* UIColor+Doordash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98396AF2095E6A600BCC9BA /* UIColor+Doordash.swift */; };
 		F9AB7C572079BCEC005E435B /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C562079BCEC005E435B /* Restaurant.swift */; };
 		F9AB7C592079BEE4005E435B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C582079BEE4005E435B /* Resource.swift */; };
 		F9AB7C5B2079D967005E435B /* RawServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB7C5A2079D967005E435B /* RawServerResponse.swift */; };
@@ -61,6 +62,7 @@
 		F92277892078EA48002B0A40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F922778B2078EA96002B0A40 /* DoorDashError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashError.swift; sourceTree = "<group>"; };
 		F98396A52095BB3700BCC9BA /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
+		F98396AF2095E6A600BCC9BA /* UIColor+Doordash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Doordash.swift"; sourceTree = "<group>"; };
 		F9AB7C562079BCEC005E435B /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F9AB7C582079BEE4005E435B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		F9AB7C5A2079D967005E435B /* RawServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawServerResponse.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				F9AB7C65207A9F7E005E435B /* UIViewController+HUD.swift */,
 				F9AB7C6B207AD077005E435B /* UITableViewCell+Reusable.swift */,
+				F98396AF2095E6A600BCC9BA /* UIColor+Doordash.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				F92277822078C923002B0A40 /* Reachability.m in Sources */,
 				F922778C2078EA96002B0A40 /* DoorDashError.swift in Sources */,
 				F9AB7C60207A8C5C005E435B /* Cache.swift in Sources */,
+				F98396B02095E6A600BCC9BA /* UIColor+Doordash.swift in Sources */,
 				F9AB7C66207A9F7E005E435B /* UIViewController+HUD.swift in Sources */,
 				F9BB44C320788E970008EFF9 /* AppDelegate.swift in Sources */,
 			);
