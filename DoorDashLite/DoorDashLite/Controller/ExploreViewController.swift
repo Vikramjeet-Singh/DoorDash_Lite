@@ -78,7 +78,7 @@ final class ExploreViewController: UIViewController {
     
     private func updateView() {
         if let viewModel = viewModel,
-            viewModel.restaurantCount <= 0
+            viewModel.count <= 0
         {
             let emptyResultController = UIAlertController(title: "", message:NSLocalizedString("No available restaurants", comment: ""), preferredStyle: .alert)
             let doneAction = UIAlertAction(title: "OK", style: .default, handler: nil)
